@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <style>
+    text {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: 60px;
+      fill: #0f172a; /* Light theme text color */
+    }
+    tspan {
+      fill: #082567; /* Light theme accent color */
+    }
+    @media (prefers-color-scheme: dark) {
+      text {
+        fill: #ffffff; /* Dark theme text color */
+      }
+      tspan {
+        fill: #0F52BA; /* Dark theme accent color */
+      }
+    }
+  </style>
+  <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle">JA<tspan>.</tspan></text>
+</svg>
