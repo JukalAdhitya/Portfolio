@@ -37,13 +37,13 @@ const Hero = () => {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <h1 style={{ fontSize: '4rem', marginBottom: '1rem', letterSpacing: '-1px' }}>
+            <h1 className="hero-title">
               Hi, I'm <span className="text-gradient">Jukal Adhitya</span>
             </h1>
-            <h2 style={{ fontSize: '2rem', marginBottom: '1rem', fontWeight: 600 }}>
+            <h2 className="hero-subtitle">
               Software Developer & AI/ML Enthusiast
             </h2>
-            <p style={{ fontSize: '1.2rem', opacity: 0.9, maxWidth: '700px', margin: '0 auto', lineHeight: 1.6 }}>
+            <p className="hero-description">
               B.Tech CSE graduate building scalable full-stack applications and AI-powered solutions. Passionate about automating workflows and solving real-world problems.
             </p>
           </motion.div>
@@ -52,7 +52,7 @@ const Hero = () => {
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap', justifyContent: 'center', marginTop: '1rem' }}
+            style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center', marginTop: '1rem' }}
           >
             <SocialIcon href="mailto:jukaladhitya@gmail.com" icon={<Mail />} label="Email" />
             <SocialIcon href="https://linkedin.com/in/jukal-adhitya-g" icon={<Linkedin />} label="LinkedIn" />
@@ -63,7 +63,7 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8 }}
-            style={{ display: 'flex', gap: '2rem', opacity: 0.7, marginTop: '2rem', flexWrap: 'wrap', justifyContent: 'center' }}
+            style={{ display: 'flex', gap: '1.25rem', opacity: 0.7, marginTop: '1.5rem', flexWrap: 'wrap', justifyContent: 'center' }}
           >
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
               <Phone size={18} />

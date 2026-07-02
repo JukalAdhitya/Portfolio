@@ -65,20 +65,20 @@ const Certificates = () => {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
         >
-          <h2 style={{ fontSize: '2.5rem', marginBottom: '3rem', textAlign: 'center' }}>
+          <h2 style={{ fontSize: 'clamp(2rem, 5vw, 2.5rem)', marginBottom: '3rem', textAlign: 'center' }}>
             Certifications & <span className="text-gradient">Awards</span>
           </h2>
 
-          <div style={{ display: 'flex', flexDirection: 'column', lg: { flexDirection: 'row' }, gap: '3rem' }} className="flex-layout-responsive">
+          <div className="flex-layout-responsive" style={{ display: 'flex', flexDirection: 'column', gap: '2.5rem' }}>
 
             {/* Certifications Left Column */}
-            <div style={{ flex: 1.6 }}>
-              <h3 style={{ fontSize: '1.5rem', marginBottom: '1.5rem', color: 'var(--text-primary)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            <div style={{ flex: 1.6, width: '100%' }}>
+              <h3 style={{ fontSize: 'clamp(1.25rem, 4vw, 1.5rem)', marginBottom: '1.5rem', color: 'var(--text-primary)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                 <ShieldCheck size={24} style={{ color: 'var(--accent-color)' }} />
                 Professional Certifications
               </h3>
 
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1.5rem' }}>
                 {certificates.map((cert, index) => (
                   <motion.div
                     key={index}
@@ -146,8 +146,8 @@ const Certificates = () => {
             </div>
 
             {/* Awards Right Column */}
-            <div style={{ flex: 1 }}>
-              <h3 style={{ fontSize: '1.5rem', marginBottom: '1.5rem', color: 'var(--text-primary)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            <div style={{ flex: 1, width: '100%' }}>
+              <h3 style={{ fontSize: 'clamp(1.25rem, 4vw, 1.5rem)', marginBottom: '1.5rem', color: 'var(--text-primary)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                 <Trophy size={24} style={{ color: 'var(--accent-color)' }} />
                 Awards & Honors
               </h3>

@@ -44,7 +44,7 @@ const Projects = () => {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
         >
-          <h2 style={{ fontSize: '2.5rem', marginBottom: '3rem', textAlign: 'center' }}>
+          <h2 style={{ fontSize: 'clamp(2rem, 5vw, 2.5rem)', marginBottom: '3rem', textAlign: 'center' }}>
             Featured <span className="text-gradient">Projects</span>
           </h2>
 

@@ -19,7 +19,7 @@ const About = () => {
 
               <div className="glass-panel" style={{ padding: '2rem' }}>
                 <p style={{ fontSize: '1.1rem', lineHeight: 1.8, marginBottom: '1.5rem', opacity: 0.9 }}>
-                  I'm a motivated <strong style={{ color: 'var(--text-primary)' }}>Computer Science Engineering</strong> graduate from <strong style={{ color: 'var(--text-primary)' }}>SRM Institute of Science and Technology</strong> with a CGPA of <strong style={{ color: 'var(--text-primary)' }}>8.74</strong>. I specialize in building <strong style={{ color: 'var(--text-primary)' }}>AI-powered applications</strong> and automating complex workflows.
+                  I'm a motivated <strong style={{ color: 'var(--text-primary)' }}>Computer Science Engineering</strong> graduate from <strong style={{ color: 'var(--text-primary)' }}>SRM Institute of Science and Technology</strong> with a CGPA of <strong style={{ color: 'var(--text-primary)' }}>8.74</strong>  .<br></br>I specialize in building <strong style={{ color: 'var(--text-primary)' }}>AI-powered applications</strong> and automating complex workflows.
                 </p>
                 <p style={{ fontSize: '1.1rem', lineHeight: 1.8, marginBottom: '1.5rem', opacity: 0.9 }}>
                   My experience spans from automating system health checks at <strong style={{ color: 'var(--text-primary)' }}>Ford Motor</strong> across 18 European markets, to building AI-driven resume processing platforms at <strong style={{ color: 'var(--text-primary)' }}>SRM Technologies</strong>. I thrive on turning complex problems into elegant, efficient solutions.

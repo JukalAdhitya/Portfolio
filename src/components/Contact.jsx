@@ -13,21 +13,21 @@ const Contact = () => {
           transition={{ duration: 0.6 }}
         >
           <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
-            <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem' }}>
+            <h2 style={{ fontSize: 'clamp(2rem, 5vw, 2.5rem)', marginBottom: '1.5rem' }}>
               Get in <span className="text-gradient">Touch</span>
             </h2>
             
-            <p style={{ fontSize: '1.2rem', lineHeight: 1.6, opacity: 0.9, marginBottom: '3rem' }}>
+            <p style={{ fontSize: 'clamp(1rem, 3vw, 1.2rem)', lineHeight: 1.6, opacity: 0.9, marginBottom: '3rem' }}>
               I'm currently looking for new opportunities. Whether you have a question, a project idea, or just want to say hi — my inbox is always open.
             </p>
 
-            <div className="glass-panel" style={{ padding: '3rem', display: 'flex', flexDirection: 'column', gap: '2rem', alignItems: 'center' }}>
-              <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '2rem', width: '100%' }}>
+            <div className="glass-panel" style={{ padding: 'clamp(1.5rem, 5vw, 3rem)', display: 'flex', flexDirection: 'column', gap: '2rem', alignItems: 'center' }}>
+              <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '1.5rem', width: '100%' }}>
                 <ContactLink href="mailto:jukaladhitya@gmail.com" icon={<Mail />} text="jukaladhitya@gmail.com" />
                 <ContactLink href="tel:+919940551122" icon={<Phone />} text="+91 99405 51122" />
               </div>
               
-              <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '2rem', width: '100%' }}>
+              <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '1.5rem', width: '100%' }}>
                 <ContactLink href="https://linkedin.com/in/jukal-adhitya-g" icon={<Linkedin />} text="jukal-adhitya-g" />
                 <ContactLink href="https://github.com/JukalAdhitya" icon={<Github />} text="JukalAdhitya" />
               </div>
@@ -72,8 +72,8 @@ const ContactLink = ({ href, icon, text }) => (
       gap: '0.75rem',
       color: 'var(--text-color)',
       textDecoration: 'none',
-      fontSize: '1.1rem',
-      padding: '0.75rem 1.5rem',
+      fontSize: 'clamp(0.95rem, 2.5vw, 1.1rem)',
+      padding: '0.75rem clamp(1rem, 3vw, 1.5rem)',
       background: 'var(--bg-color)',
       border: '1px solid var(--card-border)',
       borderRadius: '20px',

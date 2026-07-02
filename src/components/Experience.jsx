@@ -37,23 +37,13 @@ const Experience = () => {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
         >
-          <h2 style={{ fontSize: '2.5rem', marginBottom: '4rem', textAlign: 'center' }}>
+          <h2 style={{ fontSize: 'clamp(2rem, 5vw, 2.5rem)', marginBottom: '4rem', textAlign: 'center' }}>
             Work <span className="text-gradient">Experience</span>
           </h2>
 
-          <div style={{ position: 'relative', maxWidth: '1000px', margin: '0 auto' }}>
+          <div className="timeline-container">
             {/* Center Timeline Line */}
-            <div style={{
-              position: 'absolute',
-              left: '50%',
-              transform: 'translateX(-50%)',
-              top: '0',
-              bottom: '0',
-              width: '4px',
-              background: 'linear-gradient(to bottom, transparent, var(--accent-color), #8b5cf6, transparent)',
-              borderRadius: '4px',
-              zIndex: 0
-            }}></div>
+            <div className="timeline-line"></div>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '4rem', position: 'relative', zIndex: 1 }}>
               {experiences.map((exp, index) => {
@@ -65,12 +55,7 @@ const Experience = () => {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ duration: 0.6, type: 'spring', stiffness: 50 }}
-                    style={{ 
-                      display: 'flex', 
-                      justifyContent: isEven ? 'flex-start' : 'flex-end',
-                      width: '100%',
-                      position: 'relative'
-                    }}
+                    className={`timeline-card-wrapper ${isEven ? '' : 'odd'}`}
                   >
                     
                     {/* Timeline Node Data */}
@@ -83,30 +68,22 @@ const Experience = () => {
                       glarePosition="all"
                       scale={1.01}
                       transitionSpeed={2000}
-                      style={{ width: 'calc(50% - 2rem)' }}
+                      className="timeline-tilt"
                     >
-                      <div className="glass-panel" style={{ 
-                        padding: '2rem', 
-                        position: 'relative',
+                      <div className="glass-panel timeline-card" style={{ 
                         textAlign: isEven ? 'right' : 'left',
-                        height: '100%'
                       }}>
                       
                       {/* Timeline Dot Point */}
-                      <div style={{
-                        position: 'absolute',
-                        top: '2.5rem',
-                        [isEven ? 'right' : 'left']: '-2rem',
-                        transform: isEven ? 'translate(50%, -50%)' : 'translate(-50%, -50%)',
-                        width: '20px',
-                        height: '20px',
-                        borderRadius: '50%',
-                        background: 'var(--accent-color)',
-                        boxShadow: '0 0 15px var(--accent-glow), 0 0 0 5px var(--bg-color)',
-                        zIndex: 2
-                      }}></div>
+                      <div 
+                        className="timeline-dot"
+                        style={{
+                          [isEven ? 'right' : 'left']: '-2rem',
+                          transform: isEven ? 'translate(50%, -50%)' : 'translate(-50%, -50%)',
+                        }}
+                      ></div>
 
-                      <div style={{ marginBottom: '1.5rem', display: 'flex', flexDirection: 'column', gap: '0.5rem', alignItems: isEven ? 'flex-end' : 'flex-start' }}>
+                      <div className="timeline-header" style={{ marginBottom: '1.5rem', display: 'flex', flexDirection: 'column', gap: '0.5rem', alignItems: isEven ? 'flex-end' : 'flex-start' }}>
                         <div style={{ display: 'inline-block', padding: '0.4rem 1rem', background: 'rgba(59, 130, 246, 0.1)', borderRadius: '20px', fontSize: '0.85rem', color: 'var(--accent-color)', fontWeight: 700, letterSpacing: '1px' }}>
                           {exp.duration}
                         </div>

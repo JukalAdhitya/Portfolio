@@ -148,3 +148,177 @@ body:hover .cursor-glow {
   transform: translateX(3px);
   opacity: 0.8;
 }
+
+/* Responsive Typography & Mobile UI Classes */
+.section-title {
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  margin-bottom: 1rem;
+  letter-spacing: -1px;
+}
+
+.hero-subtitle {
+  font-size: clamp(1.25rem, 4vw, 2rem);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.hero-description {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  opacity: 0.9;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Responsive Timeline styling for Experience.jsx */
+.timeline-container {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(to bottom, transparent, var(--accent-color), #8b5cf6, transparent);
+  border-radius: 4px;
+  z-index: 0;
+}
+
+.timeline-card-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  position: relative;
+}
+
+.timeline-card-wrapper.odd {
+  justify-content: flex-end;
+}
+
+.timeline-tilt {
+  width: calc(50% - 2rem);
+}
+
+.timeline-card {
+  padding: 2rem;
+  position: relative;
+  height: 100%;
+}
+
+.timeline-dot {
+  position: absolute;
+  top: 2.5rem;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--accent-color);
+  box-shadow: 0 0 15px var(--accent-glow), 0 0 0 5px var(--bg-color);
+  z-index: 2;
+}
+
+/* Navbar & Container Mobile Responsiveness */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  cursor: pointer;
+  z-index: 60;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.nav-menu-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: var(--bg-color);
+  background-image: var(--bg-gradient);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  z-index: 55;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.mobile-menu.open {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  
+  .nav-menu-btn {
+    display: block;
+  }
+  
+  .container {
+    padding: 0 1.25rem;
+  }
+  
+  section {
+    padding: 3.5rem 0;
+  }
+
+  .timeline-line {
+    left: 20px;
+    transform: none;
+  }
+  
+  .timeline-card-wrapper, .timeline-card-wrapper.odd {
+    justify-content: flex-start;
+    padding-left: 45px;
+  }
+  
+  .timeline-tilt {
+    width: 100%;
+  }
+  
+  .timeline-card {
+    text-align: left !important;
+    padding: 1.5rem;
+  }
+  
+  .timeline-dot {
+    left: -25px !important;
+    right: auto !important;
+    transform: translate(-50%, -50%) !important;
+  }
+
+  .timeline-header {
+    align-items: flex-start !important;
+  }
+}
+
