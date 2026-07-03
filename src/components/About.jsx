@@ -11,8 +11,8 @@ const About = () => {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
         >
-          <div className="flex-layout-responsive" style={{ display: 'flex', flexDirection: 'column', gap: '3rem', alignItems: 'center' }}>
-            <div style={{ flex: 1, width: '100%' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '2.5rem' }}>
+            <div style={{ width: '100%' }}>
               <h2 style={{ fontSize: 'clamp(2rem, 5vw, 2.5rem)', marginBottom: '2rem' }}>
                 About <span className="text-gradient">Me</span>
               </h2>
@@ -30,7 +30,7 @@ const About = () => {
               </div>
             </div>
 
-            <div style={{ flex: 1, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.5rem', width: '100%' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1.5rem', width: '100%' }}>
               <StatCard title="Education" desc="B.Tech in CSE" subDesc="SRM IST • CGPA: 8.74" />
               <StatCard title="Location" desc="Chennai, Tamil Nadu" subDesc="India" />
               <StatCard title="Certifications" desc="4 Oracle & NPTEL" subDesc="Cloud, MySQL, GenAI, Java" />
