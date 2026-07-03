@@ -11,9 +11,9 @@ const About = () => {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
         >
-          <div style={{ display: 'flex', flexDirection: 'column', lg: { flexDirection: 'row' }, gap: '4rem', alignItems: 'center' }}>
-            <div style={{ flex: 1 }}>
-              <h2 style={{ fontSize: '2.5rem', marginBottom: '2rem' }}>
+          <div className="flex-layout-responsive" style={{ display: 'flex', flexDirection: 'column', gap: '3rem', alignItems: 'center' }}>
+            <div style={{ flex: 1, width: '100%' }}>
+              <h2 style={{ fontSize: 'clamp(2rem, 5vw, 2.5rem)', marginBottom: '2rem' }}>
                 About <span className="text-gradient">Me</span>
               </h2>
 
